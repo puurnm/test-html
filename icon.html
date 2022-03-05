@@ -1,0 +1,83 @@
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="https://w7.pngwing.com/pngs/661/360/png-transparent-whatsapp-icon-logo-whatsapp-logo-text-instant-messaging-whatsapp-logo-png-thumbnail.png">
+    <title>Frontend ADE - Hari ke-2</title>
+    <style>
+        .table-css, .th-css, .td-css {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="public/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="public/css/buttons.dataTables.min.css">
+</head>
+<body class="body">
+    <h1 class="h1">SIGIT PURNOMO</h1>
+    <p class="p">Yayasan Ekspor Nusantara</p>
+
+    <a href="https://belajar.sekolahekspor.com/course/view.php?id=31">Visit This Site</a>
+    <div style="margin-top: 50px;margin-left: 15px;">
+        <a href="index.html">Visit This Site</a>
+    </div>
+
+    <table class="table-css" style="width: 100%;">
+        <tr>
+          <th class="th-css">Company</th>
+          <th class="th-css">Contact</th>
+          <th class="th-css">Country</th>
+        </tr>
+        <tr>
+          <td class="td-css">Alfreds Futterkiste</td>
+          <td class="td-css">Maria Anders</td>
+          <td class="td-css">Germany</td>
+        </tr>
+        <tr>
+          <td class="td-css">Centro comercial Moctezuma</td>
+          <td class="td-css">Francisco Chang</td>
+          <td class="td-css">Mexico</td>
+        </tr>
+      </table>
+      <br>
+      <table id="table_id" class="display">
+          <thead>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+              </tr>
+          </tbody>
+
+      </table>
+</body>
+
+<script src="public/js/jquery-3.6.0.js" type="text/javascript" charset="utf8"></script>
+<script type="text/javascript" charset="utf8" src="public/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="public/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" charset="utf8" src="public/js/jszip.min.js"></script>
+<script type="text/javascript" charset="utf8" src="public/js/pdfmake.min.js"></script>
+<script type="text/javascript" charset="utf8" src="public/js/vfs_fonts.js"></script>
+<script type="text/javascript" charset="utf8" src="public/js/buttons.html5.min.js"></script>
+<script type="text/javascript" charset="utf8" src="public/js/buttons.print.min.js"></script>
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        });
+    });
+</script>
+</html>
